@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="user-info">
+        <span id="currency">USD</span>
+        <span id="location">Loading...</span>
+        <div class="cart-icon">
+            <img src="assets/icons/cart-icon.png" alt="Cart">
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<div class="profile-container">
+    <h2>User Profile</h2>
+    <div class="profile-photo">
+        <img src="assets/icons/profile-placeholder.png" alt="Profile Photo" id="profile-pic">
+        <input type="file" id="upload-profile" accept="image/*">
+    </div>
+    <div class="profile-options">
+        <button onclick="changeUsername()">Change Username</button>
+        <button onclick="changePassword()">Change Password</button>
+        <button onclick="contactSupport()">Contact Support</button>
+    </div>
+    <h3>Order History</h3>
+    <div id="order-history">No orders found.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

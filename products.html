@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="user-info">
+        <span id="currency">USD</span>
+        <span id="location">Loading...</span>
+        <div class="cart-icon">
+            <img src="assets/icons/cart-icon.png" alt="Cart">
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="orders.html">Orders</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="user-info">
+        <span id="currency">USD</span>
+        <span id="location">Loading...</span>
+        <div class="cart-icon">
+            <img src="assets/icons/cart-icon.png" alt="Cart">
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+    <header>
+        <nav>
+            <div class="logo">ShopLogo</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-icon"><a href="cart.html">🛒 <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-page">
+        <h2>Product Details</h2>
+        <div class="product-display">
+            <img src="assets/product1.jpg" alt="Product Image" class="product-image">
+            <div class="product-info">
+                <h3>Product Name</h3>
+                <p>Description of the product goes here.</p>
+                <p><strong>Price: </strong>$99.99</p>
+                <label for="variants">Choose a variant:</label>
+                <select id="variants">
+                    <option value="variant1">Variant 1</option>
+                    <option value="variant2">Variant 2</option>
+                </select>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <div id="product-list" class="product-container"></div>
+    </body>
+    
+</html>

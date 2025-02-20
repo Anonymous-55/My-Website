@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+
+        .menu-btn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            flex: 1;
+            color: #fff;
+        }
+
+        .cart-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .menu-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter {
+            margin-bottom: 20px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 90%;
+            max-width: 300px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #555;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payment-options img {
+            width: 40px;
+            margin: 5px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="user-info">
+        <span id="currency">USD</span>
+        <span id="location">Loading...</span>
+        <div class="cart-icon">
+            <img src="assets/icons/cart-icon.png" alt="Cart">
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="orders.html">Orders</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="user-info">
+        <span id="currency">USD</span>
+        <span id="location">Loading...</span>
+        <div class="cart-icon">
+            <img src="assets/icons/cart-icon.png" alt="Cart">
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+    <header>
+        <div class="menu-dropdown">
+            <button class="menu-btn">☰</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="logo">Gam3rz Ac3sori3z</div>
+        <div class="cart-icon"><a href="cart.html">🛒 <span id="cart-count">0</span></a></div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Our Store</h1>
+        <p>Discover the best products for your needs</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/product 1.jpg" alt="Product 1">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- More product cards -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="newsletter">
+            <h4>Subscribe to Our Newsletter</h4>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+        <div class="payment-options">
+            <h4>We Accept</h4>
+            <img src="assets/icons/visa.png" alt="Visa">
+            <img src="assets/icons/mastercard.png" alt="Mastercard">
+            <img src="assets/icons/amex.png" alt="American Express">
+            <img src="assets/icons/discover.png" alt="Discover">
+            <img src="assets/icons/gpay.png" alt="Google Pay">
+            <img src="assets/icons/applepay.png" alt="Apple Pay">
+            <img src="assets/icons/ach.png" alt="ACH">
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

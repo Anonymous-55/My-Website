@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">My Store</a>
+    </div>
+    <nav class="nav-links">
+        <a href="products.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+</header>
+
+<main class="checkout-container">
+    <h2>Checkout</h2>
+    <div id="checkout-items"></div>
+    <p id="checkout-total">Total: $0.00</p>
+    <button id="place-order">Place Order</button>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    loadCheckout();
+});
+
+function loadCheckout() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const checkoutContainer = document.getElementById("checkout-items");
+    const totalContainer = document.getElementById("checkout-total");
+
+    checkoutContainer.innerHTML = "";
+
+    if (cart.length === 0) {
+        checkoutContainer.innerHTML = "<p>Your cart is empty.</p>";
+        totalContainer.textContent = "Total: $0.00";
+        return;
+    }
+
+    let totalPrice = 0;
+
+    cart.forEach((item) => {
+        const checkoutItem = document.createElement("div");
+        checkoutItem.classList.add("checkout-item");
+        checkoutItem.innerHTML = `
+            <h4>${item.name}</h4>
+            <p>Price: $${item.price}</p>
+            <p>Quantity: ${item.quantity}</p>
+        `;
+        checkoutContainer.appendChild(checkoutItem);
+        totalPrice += item.price * item.quantity;
+    });
+
+    totalContainer.textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
+
+document.getElementById("place-order").addEventListener("click", () => {
+    alert("Order placed successfully!");
+    localStorage.removeItem("cart");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

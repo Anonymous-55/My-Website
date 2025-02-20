@@ -1,0 +1,396 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ff7eb3;
+}
+
+.checkout-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.checkout-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+#checkout-btn {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(255, 117, 140, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+#checkout-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 117, 140, 0.8);
+}
+
+body {
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Fixed Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Slight transparency */
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Navbar Items */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Currency & Location */
+.navbar .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.navbar .user-info span {
+    font-size: 1rem;
+}
+
+/* Cart Icon */
+.navbar .cart-icon {
+    position: relative;
+}
+
+.navbar .cart-icon img {
+    width: 30px;
+}
+
+.navbar .cart-icon .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Product Cards */
+.product-card {
+    background: #222;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #ffdd33;
+    transform: scale(1.1);
+}
+
+/* Checkout UI */
+.checkout-container {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Shrink Checkout Button */
+.checkout-btn {
+    background: #ffcc00;
+    color: black;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #ffdd33;
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-icon img {
+        width: 25px;
+    }
+
+    .profile-container, .checkout-container {
+        padding: 15px;
+    }
+}
+
+/* Product Page Layout Enhancements */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #222;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll Animations */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Refined Hover Effects for Buttons */
+button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #ffdd33;
+    transform: scale(1.1);
+}
+
+/* Profile & Checkout UI Enhancements */
+.profile-container, .checkout-container {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode button {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .product-card {
+    background: #333;
+    box-shadow: none;
+}
+
+
+
+/* Wishlist Icon Styling */
+.wishlist-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.wishlist-icon:hover {
+    background: rgba(255, 204, 0, 0.8);
+}
+
+.wishlist-icon.added {
+    background: gold;
+}
+
+
+/* Currency Selector Styling */
+.currency-selector {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* Order Status Tracking */
+.order-status {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-pending {
+    background: orange;
+    color: white;
+}
+
+.status-shipped {
+    background: blue;
+    color: white;
+}
+
+.status-delivered {
+    background: green;
+    color: white;
+}
+
+
+/* Improved Checkout UI */
+.checkout-container {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+    margin: auto;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #ffcc00;
+    color: black;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: #ffdd33;
+}
